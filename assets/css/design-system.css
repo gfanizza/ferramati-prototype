@@ -1,37 +1,37 @@
 /* ============================================
-   FERRAMATI — Design System v2.1
-   Visual DNA: Engineering Authority
+   FERRAMATI — Design System v3.0
+   Visual DNA: Industrial Brochure → Digital Interface
    Primary Accent: Safety Orange (brand identity)
    Secondary: Blueprint Blue (technical)
    ============================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
 /* --- Tokens --- */
 :root {
-  /* Brand Palette */
-  --color-safety-orange:      #F26A21;
-  --color-safety-orange-dark:  #C94F14;
-  --color-safety-orange-light: #FFF3EB;
-  --color-safety-orange-dim:   rgba(242, 106, 33, 0.12);
+  /* Brand Palette — Visual DNA Brochure 2026 */
+  --color-safety-orange:      #F39200;
+  --color-safety-orange-dark:  #D17E00;
+  --color-safety-orange-light: #FFF6E8;
+  --color-safety-orange-dim:   rgba(243, 146, 0, 0.12);
 
-  /* Technical Palette */
+  /* Technical Palette — Blueprint Blue (preserved) */
   --color-blueprint-blue:     #4A90CC;
   --color-blueprint-hi:       #5BA8E6;
   --color-blueprint-pale:     #D4E4F5;
 
-  /* Neutrals — Dark */
-  --forge-black:    #111416;
-  --forge-dark:     #1A1E22;
-  --forge-mid:      #242930;
+  /* Neutrals — Dark (graphite system) */
+  --forge-black:    #202626;
+  --forge-dark:     #2D3333;
+  --forge-mid:      #3A4040;
 
-  /* Neutrals — Light */
+  /* Neutrals — Light (paper system) */
   --steel-50:       #F7F6F2;
-  --steel-100:      #ECEBE6;
+  --steel-100:      #E8E6E0;
   --steel-200:      #D8D8D2;
-  --steel-400:      #9BA1A6;
-  --steel-600:      #737B82;
-  --steel-800:      #2F3437;
+  --steel-400:      #6E7474;
+  --steel-600:      #6E7474;
+  --steel-800:      #1D2323;
   --pure-white:     #FFFFFF;
 
   /* Semantic */
@@ -39,36 +39,36 @@
   --color-warning: #B8791A;
   --color-error:   #A33A2D;
 
-  /* Typography */
-  --font-display: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
-  --font-body:    'DM Sans', 'Helvetica Neue', Arial, sans-serif;
-  --font-mono:    'JetBrains Mono', 'Courier New', monospace;
+  /* Typography — Brochure DNA: condensed headings, technical body */
+  --font-display: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+  --font-body:    'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono:    'IBM Plex Mono', 'Courier New', monospace;
 
-  /* Type Scale */
-  --fs-display:  clamp(3.5rem, 7vw, 6.5rem);
-  --fs-h1:       clamp(2.5rem, 5vw, 4rem);
-  --fs-h2:       clamp(2rem, 3.2vw, 2.625rem);
+  /* Type Scale — tall condensed headings */
+  --fs-display:  clamp(3.5rem, 8vw, 7.4rem);
+  --fs-h1:       clamp(2.5rem, 5vw, 4.5rem);
+  --fs-h2:       clamp(2rem, 3.5vw, 2.75rem);
   --fs-h3:       clamp(1.375rem, 2vw, 1.75rem);
   --fs-h4:       1.25rem;
   --fs-body-lg:  1.125rem;
   --fs-body:     1rem;
   --fs-sm:       0.875rem;
-  --fs-xs:       0.8125rem;
+  --fs-xs:       0.6875rem;
 
-  /* Line Heights */
-  --lh-tight:   1.05;
-  --lh-heading: 1.15;
-  --lh-body:    1.55;
+  /* Line Heights — tighter for condensed */
+  --lh-tight:   0.92;
+  --lh-heading: 1.0;
+  --lh-body:    1.65;
 
   /* Letter Spacing */
-  --ls-label:  0.06em;
+  --ls-label:  0.08em;
   --ls-data:   0.02em;
   --ls-tight: -0.02em;
 
   /* Spacing */
-  --s-2xs: 4px;  --s-xs: 8px;   --s-sm: 12px;
-  --s-md:  16px; --s-lg: 24px;  --s-xl: 32px;
-  --s-2xl: 48px; --s-3xl: 72px; --s-4xl: 96px;
+  --s-2xs: 4px;  --s-xs: 8px;   --s-sm: 16px;
+  --s-md:  24px; --s-lg: 24px;  --s-xl: 48px;
+  --s-2xl: 48px; --s-3xl: 80px; --s-4xl: 120px;
   --s-5xl: 128px;
 
   /* Layout */
@@ -77,21 +77,21 @@
   --pad-tab:  32px;
   --pad-mob:  20px;
 
-  /* Border & Radius */
+  /* Border & Radius — near-sharp, industrial */
   --radius-sm: 2px;
   --radius-md: 4px;
-  --radius-lg: 8px;
+  --radius-lg: 4px;
   --border-light:  1px solid var(--steel-200);
-  --border-dark:   1px solid rgba(255,255,255,0.08);
+  --border-dark:   1px solid rgba(255,255,255,0.18);
 
-  /* Shadow */
-  --shadow-card: 0 8px 24px rgba(23, 26, 28, 0.06);
+  /* Shadow — very restrained */
+  --shadow-card: 0 12px 30px rgba(0,0,0,0.08);
 
-  /* Motion */
-  --t-fast:   160ms;
-  --t-std:    240ms;
+  /* Motion — technical, quick */
+  --t-fast:   180ms;
+  --t-std:    260ms;
   --t-slow:   420ms;
-  --ease:     cubic-bezier(0.2, 0, 0, 1);
+  --ease:     cubic-bezier(0.22, 1, 0.36, 1);
   --ease-out: cubic-bezier(0.0, 0, 0.2, 1);
 }
 
@@ -115,7 +115,7 @@ ul, ol { list-style: none; }
 h1, .h1 {
   font-family: var(--font-display);
   font-size: var(--fs-h1);
-  font-weight: 700;
+  font-weight: 300;
   line-height: var(--lh-tight);
   color: var(--forge-black);
   letter-spacing: var(--ls-tight);
@@ -123,30 +123,30 @@ h1, .h1 {
 h2, .h2 {
   font-family: var(--font-display);
   font-size: var(--fs-h2);
-  font-weight: 600;
+  font-weight: 300;
   line-height: var(--lh-heading);
   color: var(--forge-black);
-  letter-spacing: var(--ls-tight);
+  letter-spacing: -0.01em;
 }
 h3, .h3 {
   font-family: var(--font-display);
   font-size: var(--fs-h3);
-  font-weight: 600;
+  font-weight: 400;
   line-height: var(--lh-heading);
   color: var(--steel-800);
 }
 h4, .h4 {
   font-family: var(--font-display);
   font-size: var(--fs-h4);
-  font-weight: 600;
+  font-weight: 500;
   line-height: var(--lh-heading);
   color: var(--steel-800);
 }
 
 .eyebrow {
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-size: var(--fs-xs);
-  font-weight: 500;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: var(--ls-label);
   color: var(--color-safety-orange);
@@ -192,15 +192,17 @@ h4, .h4 {
   align-items: center;
   gap: var(--s-xs);
   padding: 14px 28px;
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: var(--fs-sm);
   font-weight: 600;
   border: none;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-sm);
   cursor: pointer;
   transition: all var(--t-fast) var(--ease);
   text-decoration: none;
   line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 .btn--primary {
   background-color: var(--color-safety-orange);
@@ -247,7 +249,7 @@ h4, .h4 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 64px;
+  height: 84px;
 }
 .site-header__logo img { height: 34px; width: auto; }
 
@@ -333,13 +335,13 @@ h4, .h4 {
   }
 }
 
-/* Blueprint border animation — bottom edge only */
+/* Blueprint border animation — top orange bar marker (brochure style) */
 .hero::after {
   content: '';
   position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--color-blueprint-blue), var(--color-safety-orange), transparent);
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: var(--color-safety-orange);
   opacity: 0;
   animation: borderReveal 1.2s var(--ease-out) 0.8s forwards;
   pointer-events: none;
@@ -461,7 +463,7 @@ h4, .h4 {
 .product-card__title {
   font-family: var(--font-display);
   font-size: var(--fs-h4);
-  font-weight: 600;
+  font-weight: 400;
   color: var(--forge-black);
   margin-bottom: var(--s-sm);
 }
@@ -525,7 +527,7 @@ h4, .h4 {
 .service-item__title {
   font-family: var(--font-display);
   font-size: var(--fs-h4);
-  font-weight: 600;
+  font-weight: 500;
   color: var(--forge-black);
   margin-bottom: var(--s-xs);
 }
@@ -640,7 +642,7 @@ h4, .h4 {
 .cta-block__title {
   font-family: var(--font-display);
   font-size: var(--fs-h2);
-  font-weight: 600;
+  font-weight: 300;
   color: var(--pure-white);
   margin-bottom: var(--s-md);
 }
@@ -885,9 +887,9 @@ h4, .h4 {
 .hero__headline {
   font-family: var(--font-display);
   font-size: var(--fs-h1);
-  font-weight: 700;
-  line-height: 1.0;
-  letter-spacing: -0.025em;
+  font-weight: 300;
+  line-height: 0.92;
+  letter-spacing: -0.02em;
   color: var(--pure-white);
   margin-bottom: var(--s-lg);
   animation: revealUp 0.8s var(--ease-out) 0.2s both;
@@ -1583,4 +1585,381 @@ h4, .h4 {
 }
 .site-footer__legal a:hover {
   color: var(--pure-white);
+}
+
+/* ============================================
+   BROCHURE SECTION MARKERS — Orange bar top
+   ============================================ */
+.section--marked {
+  position: relative;
+}
+.section--marked::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: var(--pad-mob);
+  width: 48px;
+  height: 4px;
+  background: var(--color-safety-orange);
+}
+@media (min-width: 768px) {
+  .section--marked::before { left: var(--pad-tab); }
+}
+@media (min-width: 1024px) {
+  .section--marked::before { left: var(--pad-desk); }
+}
+
+/* Full-width orange bar variant */
+.section--bar-full::before {
+  left: 0;
+  width: 100%;
+  height: 3px;
+}
+
+/* ============================================
+   TIMELINE — Corporate history (dark section)
+   ============================================ */
+.timeline {
+  position: relative;
+  padding-left: 32px;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(255,255,255,0.12);
+}
+.timeline__item {
+  position: relative;
+  padding-bottom: var(--s-xl);
+}
+.timeline__item:last-child {
+  padding-bottom: 0;
+}
+.timeline__item::before {
+  content: '';
+  position: absolute;
+  left: -36px;
+  top: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-safety-orange);
+  border: 2px solid var(--forge-dark);
+}
+.timeline__year {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 300;
+  color: var(--color-safety-orange);
+  line-height: 1;
+  margin-bottom: var(--s-xs);
+}
+.timeline__desc {
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  color: var(--steel-200);
+  line-height: var(--lh-body);
+  max-width: 440px;
+}
+
+/* ============================================
+   CERTIFICATION BADGES — Technical chip style
+   ============================================ */
+.cert-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-sm);
+}
+.cert-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-xs);
+  padding: 10px 16px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  letter-spacing: var(--ls-data);
+  color: var(--steel-800);
+  background: var(--pure-white);
+  border: 1px solid var(--steel-200);
+  border-radius: var(--radius-sm);
+  transition: border-color var(--t-fast) var(--ease);
+}
+.cert-badge:hover {
+  border-color: var(--color-safety-orange);
+}
+.cert-badge::before {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 1px;
+  background: var(--color-safety-orange);
+  flex-shrink: 0;
+}
+
+/* Dark variant for dark sections */
+.section--dark .cert-badge {
+  background: var(--forge-mid);
+  border-color: rgba(255,255,255,0.12);
+  color: var(--steel-200);
+}
+.section--dark .cert-badge:hover {
+  border-color: var(--color-safety-orange);
+}
+
+/* ============================================
+   ADVANTAGE BLOCK — Dark lateral panel
+   ============================================ */
+.advantage-block {
+  background: var(--forge-dark);
+  padding: var(--s-xl);
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--color-safety-orange);
+}
+.advantage-block__title {
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: var(--ls-label);
+  color: var(--color-safety-orange);
+  margin-bottom: var(--s-sm);
+}
+.advantage-block__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-xs);
+}
+.advantage-block__list li {
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  color: var(--steel-200);
+  padding-left: var(--s-sm);
+  position: relative;
+  line-height: 1.5;
+}
+.advantage-block__list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 6px;
+  height: 2px;
+  background: var(--color-safety-orange);
+}
+
+/* ============================================
+   FOCUS SECTION — STEP / FERCASS innovation
+   ============================================ */
+.focus-section {
+  padding: var(--s-3xl) 0;
+  position: relative;
+}
+.focus-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--color-safety-orange);
+}
+.focus-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s-2xl);
+  align-items: start;
+}
+@media (min-width: 768px) {
+  .focus-layout { grid-template-columns: 1.2fr 1fr; }
+}
+.focus-section__eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--ls-label);
+  color: var(--color-blueprint-blue);
+  margin-bottom: var(--s-sm);
+}
+.focus-section__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-h2);
+  font-weight: 300;
+  line-height: var(--lh-heading);
+  margin-bottom: var(--s-md);
+}
+.focus-section__desc {
+  font-size: var(--fs-body);
+  color: var(--steel-400);
+  line-height: var(--lh-body);
+  max-width: 520px;
+  margin-bottom: var(--s-xl);
+}
+
+/* Dark focus variant */
+.focus-section--dark {
+  background: var(--forge-black);
+  color: var(--steel-200);
+}
+.focus-section--dark .focus-section__title {
+  color: var(--pure-white);
+}
+.focus-section--dark .focus-section__desc {
+  color: var(--steel-200);
+}
+
+/* ============================================
+   TRUST STRIP — Data points with orange markers
+   ============================================ */
+.trust-strip {
+  background: var(--pure-white);
+  border-top: 1px solid var(--steel-200);
+  border-bottom: 1px solid var(--steel-200);
+  padding: var(--s-xl) 0;
+}
+.trust-strip__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--s-md);
+}
+@media (min-width: 768px) {
+  .trust-strip__grid { grid-template-columns: repeat(5, 1fr); }
+}
+.trust-strip__item {
+  text-align: center;
+  padding: var(--s-sm);
+}
+.trust-strip__item strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 300;
+  color: var(--color-safety-orange);
+  margin-bottom: 4px;
+}
+.trust-strip__item span {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--steel-400);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-label);
+}
+
+/* ============================================
+   CORPORATE DARK SECTION
+   ============================================ */
+.corporate-section {
+  background: var(--forge-dark);
+  padding: var(--s-3xl) 0;
+  position: relative;
+}
+.corporate-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--color-safety-orange);
+}
+.corporate-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s-2xl);
+}
+@media (min-width: 768px) {
+  .corporate-layout { grid-template-columns: 1fr 1fr; }
+}
+.corporate-section h2 {
+  font-family: var(--font-display);
+  font-size: var(--fs-h2);
+  font-weight: 300;
+  color: var(--pure-white);
+  line-height: var(--lh-heading);
+  margin-bottom: var(--s-md);
+}
+.corporate-section p {
+  font-size: var(--fs-body);
+  color: var(--steel-200);
+  line-height: var(--lh-body);
+  max-width: 520px;
+}
+
+/* ============================================
+   DOWNLOAD CARDS
+   ============================================ */
+.download-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s-sm);
+}
+@media (min-width: 768px) {
+  .download-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+  .download-grid { grid-template-columns: repeat(3, 1fr); }
+}
+.download-card {
+  display: flex;
+  align-items: center;
+  gap: var(--s-sm);
+  padding: var(--s-md);
+  background: var(--pure-white);
+  border: 1px solid var(--steel-200);
+  border-radius: var(--radius-sm);
+  transition: border-color var(--t-fast) var(--ease);
+}
+.download-card:hover {
+  border-color: var(--color-safety-orange);
+}
+.download-card__icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-safety-orange-dim);
+  border-radius: var(--radius-sm);
+  color: var(--color-safety-orange);
+  flex-shrink: 0;
+}
+.download-card__icon svg {
+  width: 18px;
+  height: 18px;
+}
+.download-card__text {
+  flex: 1;
+}
+.download-card__title {
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--steel-800);
+  margin-bottom: 2px;
+}
+.download-card__meta {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--steel-400);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-label);
+}
+
+/* ============================================
+   SECTION DIVIDER — thin line
+   ============================================ */
+.section-divider {
+  border: none;
+  height: 1px;
+  background: var(--steel-200);
+  margin: 0;
+}
+.section-divider--dark {
+  background: rgba(255,255,255,0.08);
 }
