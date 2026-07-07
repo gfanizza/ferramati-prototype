@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — Area tecnica Ferramati</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/design-system.css">
+  <link rel="stylesheet" href="../../assets/css/area-tecnica.css">
+  <link rel="stylesheet" href="../../assets/css/mobile-menu.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <a href="../index.html" class="site-header__logo">
+        <img src="../../assets/img/ferramati-logo.svg" alt="Ferramati" style="filter: brightness(0) invert(1);">
+      </a>
+      <nav class="site-header__nav" aria-label="Navigazione principale">
+        <a href="../chi-siamo.html">Chi siamo</a>
+        <a href="../prodotti/index.html">Prodotti</a>
+        <a href="../index.html#soluzioni">Soluzioni</a>
+        <a href="../realizzazioni/index.html">Realizzazioni</a>
+        <a href="../news/index.html">News</a>
+        <a href="../contatti.html">Contatti</a>
+      </nav>
+      <div class="site-header__actions">
+        <div class="lang-switcher" aria-label="Selezione lingua">
+          <a href="#" class="active">IT</a>
+          <span class="sep">/</span>
+          <a href="../../index.html">EN</a>
+          <span class="sep">/</span>
+          <a href="../../ro/index.html">RO</a>
+        </div>
+        <a href="index.html" class="btn btn--outline-white btn--sm">Esci</a>
+        <button class="menu-toggle" aria-label="Apri menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+            <line x1="2" y1="5" x2="18" y2="5"/><line x1="2" y1="10" x2="18" y2="10"/><line x1="2" y1="15" x2="18" y2="15"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu__header">
+      <a href="../index.html" class="site-header__logo">
+        <img src="../../assets/img/ferramati-logo.svg" alt="Ferramati" style="filter: brightness(0) invert(1); height: 34px;">
+      </a>
+      <button class="mobile-menu__close" aria-label="Chiudi menu">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="4" y1="4" x2="16" y2="16"/><line x1="16" y1="4" x2="4" y2="16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-menu__nav" aria-label="Navigazione mobile">
+      <a href="../chi-siamo.html">Chi siamo</a>
+      <a href="../prodotti/index.html">Prodotti</a>
+      <a href="../realizzazioni/index.html">Realizzazioni</a>
+      <a href="../news/index.html">News</a>
+      <a href="../contatti.html">Contatti</a>
+    </nav>
+    <div class="mobile-menu__footer">
+      <a href="index.html" class="btn btn--primary" style="width:100%; justify-content:center;">Esci</a>
+    </div>
+  </div>
+
+  <!-- BREADCRUMB -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <a href="../index.html">Home</a>
+      <span>/</span>
+      <a href="index.html">Area tecnica</a>
+      <span>/</span>
+      <span aria-current="page">Dashboard</span>
+    </div>
+  </nav>
+
+  <!-- DASHBOARD -->
+  <section class="ta-dashboard">
+    <div class="container">
+      <div class="ta-dashboard__grid">
+
+        <!-- SIDEBAR -->
+        <aside class="ta-dash-sidebar">
+          <div class="ta-dash-sidebar__avatar" aria-hidden="true">MR</div>
+          <p class="ta-dash-sidebar__name">Mario Rossi</p>
+          <p class="ta-dash-sidebar__company">Studio Tecnico Rossi & Associati</p>
+          <span class="ta-dash-sidebar__status">Account verificato</span>
+
+          <nav class="ta-dash-sidebar__nav" aria-label="Navigazione dashboard">
+            <a href="#documenti" class="active">Documenti disponibili</a>
+            <a href="#download">I tuoi download</a>
+            <a href="#richieste">Richieste in corso</a>
+            <a href="invia-elaborati.html">Invia elaborati</a>
+            <a href="#profilo">Profilo aziendale</a>
+          </nav>
+        </aside>
+
+        <!-- MAIN -->
+        <main class="ta-dash-main">
+
+          <!-- Welcome -->
+          <div class="ta-dash-card">
+            <div class="ta-dash-card__header">
+              <h1 class="ta-dash-card__title">Benvenuto, Mario</h1>
+              <a href="invia-elaborati.html" class="btn btn--primary btn--small">Invia elaborati tecnici</a>
+            </div>
+            <p style="font-size:var(--fs-sm); color:var(--steel-600); line-height:var(--lh-body);">
+              Da qui puoi consultare e scaricare la documentazione tecnica disponibile per il tuo profilo, visualizzare lo storico dei download e monitorare le richieste di accesso ai documenti riservati.
+            </p>
+          </div>
+
+          <!-- Documenti disponibili -->
+          <div class="ta-dash-card" id="documenti">
+            <div class="ta-dash-card__header">
+              <h2 class="ta-dash-card__title">Documenti disponibili</h2>
+            </div>
+            <div class="ta-catalog__grid" style="margin-top:var(--s-sm);">
+              <article class="ta-doc-card">
+                <div class="ta-doc-card__header">
+                  <h3 class="ta-doc-card__title">Scheda tecnica B450C</h3>
+                  <span class="ta-badge ta-badge--registered">Registrazione</span>
+                </div>
+                <p class="ta-doc-card__desc">Dati meccanici, chimici e dimensionali dell'acciaio B450C.</p>
+                <div class="ta-doc-card__meta">
+                  <span class="ta-doc-card__meta-item">Prodotto: <span>Ferro sagomato</span></span>
+                  <span class="ta-doc-card__meta-item">Formato: <span>PDF</span></span>
+                </div>
+                <div class="ta-doc-card__footer">
+                  <a href="#" class="btn btn--primary btn--small">Scarica PDF</a>
+                </div>
+              </article>
+              <article class="ta-doc-card">
+                <div class="ta-doc-card__header">
+                  <h3 class="ta-doc-card__title">Scheda tecnica FERCASS</h3>
+                  <span class="ta-badge ta-badge--registered">Registrazione</span>
+                </div>
+                <p class="ta-doc-card__desc">Cassero metallico a perdere per fondazioni, plinti, travi e muri.</p>
+                <div class="ta-doc-card__meta">
+                  <span class="ta-doc-card__meta-item">Prodotto: <span>FERCASS</span></span>
+                  <span class="ta-doc-card__meta-item">Formato: <span>PDF</span></span>
+                </div>
+                <div class="ta-doc-card__footer">
+                  <a href="#" class="btn btn--primary btn--small">Scarica PDF</a>
+                </div>
+              </article>
+              <article class="ta-doc-card">
+                <div class="ta-doc-card__header">
+                  <h3 class="ta-doc-card__title">Certificato CE — Prefabbricati</h3>
+                  <span class="ta-badge ta-badge--approval">Approvazione</span>
+                </div>
+                <p class="ta-doc-card__desc">Dichiarazione di prestazione e marcatura CE per prefabbricati in c.a.</p>
+                <div class="ta-doc-card__meta">
+                  <span class="ta-doc-card__meta-item">Prodotto: <span>Lastre tralicciate</span></span>
+                  <span class="ta-doc-card__meta-item">Formato: <span>PDF</span></span>
+                </div>
+                <div class="ta-doc-card__footer">
+                  <a href="#" class="btn btn--secondary btn--small">Richiedi accesso</a>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Storico download -->
+          <div class="ta-dash-card" id="download">
+            <div class="ta-dash-card__header">
+              <h2 class="ta-dash-card__title">I tuoi download</h2>
+            </div>
+            <div style="overflow-x:auto;">
+              <table class="ta-table">
+                <thead>
+                  <tr><th>Documento</th><th>Prodotto</th><th>Data</th><th>Versione</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Scheda tecnica B450C</strong></td>
+                    <td>Ferro sagomato</td>
+                    <td>04/07/2026</td>
+                    <td style="font-family:var(--font-mono); font-size:10px;">v2.1</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Guida di posa FERCASS</strong></td>
+                    <td>FERCASS</td>
+                    <td>02/07/2026</td>
+                    <td style="font-family:var(--font-mono); font-size:10px;">v1.4</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Brochure Ferramati 2026</strong></td>
+                    <td>Corporate</td>
+                    <td>28/06/2026</td>
+                    <td style="font-family:var(--font-mono); font-size:10px;">v1.0</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Scheda tecnica lastre tralicciate</strong></td>
+                    <td>Lastre tralicciate</td>
+                    <td>25/06/2026</td>
+                    <td style="font-family:var(--font-mono); font-size:10px;">v3.0</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Richieste in corso -->
+          <div class="ta-dash-card" id="richieste">
+            <div class="ta-dash-card__header">
+              <h2 class="ta-dash-card__title">Richieste in corso</h2>
+            </div>
+            <div style="overflow-x:auto;">
+              <table class="ta-table">
+                <thead>
+                  <tr><th>Documento</th><th>Data richiesta</th><th>Stato</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Certificato CE — Prefabbricati</strong></td>
+                    <td>05/07/2026</td>
+                    <td><span class="ta-status ta-status--pending">In approvazione</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>CE + NTC 2018 + ISO 9001:2015</strong></td>
+                    <td>01/07/2026</td>
+                    <td><span class="ta-status ta-status--approved">Approvato</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Profilo -->
+          <div class="ta-dash-card" id="profilo">
+            <div class="ta-dash-card__header">
+              <h2 class="ta-dash-card__title">Profilo aziendale</h2>
+            </div>
+            <form class="ta-form" style="max-width:600px;">
+              <div class="ta-form__row ta-form__row--2">
+                <div class="ta-form__group">
+                  <label class="ta-form__label" for="prof-nome">Nome</label>
+                  <input class="ta-form__input" type="text" id="prof-nome" value="Mario" autocomplete="given-name">
+                </div>
+                <div class="ta-form__group">
+                  <label class="ta-form__label" for="prof-cognome">Cognome</label>
+                  <input class="ta-form__input" type="text" id="prof-cognome" value="Rossi" autocomplete="family-name">
+                </div>
+              </div>
+              <div class="ta-form__row ta-form__row--2">
+                <div class="ta-form__group">
+                  <label class="ta-form__label" for="prof-email">Email</label>
+                  <input class="ta-form__input" type="email" id="prof-email" value="m.rossi@studiotecnico.it" disabled autocomplete="email">
+                </div>
+                <div class="ta-form__group">
+                  <label class="ta-form__label" for="prof-telefono">Telefono</label>
+                  <input class="ta-form__input" type="tel" id="prof-telefono" value="+39 080 123 4567" autocomplete="tel">
+                </div>
+              </div>
+              <div class="ta-form__row ta-form__row--2">
+                <div class="ta-form__group">
+                  <label class="ta-form__label" for="prof-azienda">Azienda</label>
+                  <input class="ta-form__input" type="text" id="prof-azienda" value="Studio Tecnico Rossi & Associati" autocomplete="organization">
+                </div>
+                <div class="ta-form__group">
+                  <label class="ta-form__label" for="prof-ruolo">Ruolo</label>
+                  <select class="ta-form__select" id="prof-ruolo">
+                    <option value="progettista-ingegnere" selected>Progettista / Ingegnere</option>
+                    <option value="studio-tecnico">Studio tecnico</option>
+                    <option value="impresa-edile">Impresa edile</option>
+                    <option value="general-contractor">General contractor</option>
+                    <option value="direttore-lavori">Direttore lavori</option>
+                    <option value="ufficio-acquisti">Ufficio acquisti</option>
+                    <option value="responsabile-cantiere">Responsabile tecnico di cantiere</option>
+                    <option value="altro">Altro</option>
+                  </select>
+                </div>
+              </div>
+              <div class="ta-form__group">
+                <label class="ta-form__label">Prodotti di interesse</label>
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:var(--s-xs); margin-top:6px;">
+                  <label class="ta-form__checkbox"><input type="checkbox" name="interessi[]" value="ferro-sagomato" checked><span>Ferro sagomato</span></label>
+                  <label class="ta-form__checkbox"><input type="checkbox" name="interessi[]" value="fercass" checked><span>FERCASS</span></label>
+                  <label class="ta-form__checkbox"><input type="checkbox" name="interessi[]" value="lastre-tralicciate" checked><span>Lastre tralicciate</span></label>
+                  <label class="ta-form__checkbox"><input type="checkbox" name="interessi[]" value="doppie-lastre"><span>Doppie lastre</span></label>
+                  <label class="ta-form__checkbox"><input type="checkbox" name="interessi[]" value="eps"><span>Elementi EPS</span></label>
+                  <label class="ta-form__checkbox"><input type="checkbox" name="interessi[]" value="sistema-step"><span>Sistema STEP</span></label>
+                </div>
+              </div>
+              <hr class="ta-form__divider">
+              <label class="ta-form__checkbox">
+                <input type="checkbox" name="marketing" checked>
+                <span>Acconsento a ricevere comunicazioni tecnico-commerciali e aggiornamenti prodotto da Ferramati.</span>
+              </label>
+              <button type="submit" class="btn btn--primary btn--small">Salva modifiche</button>
+            </form>
+          </div>
+
+        </main>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <img src="../../assets/img/ferramati-logo.svg" alt="Ferramati" style="filter: brightness(0) invert(1); height:30px;">
+          <p>Partner tecnico per l'edilizia civile e industriale. Ferro sagomato, prefabbricati in c.a. e sistemi EPS.</p>
+        </div>
+        <div>
+          <h4>Prodotti</h4>
+          <ul>
+            <li><a href="../prodotti/ferro-sagomato.html">Ferro sagomato</a></li>
+            <li><a href="../prodotti/fercass.html">FERCASS</a></li>
+            <li><a href="../prodotti/lastre-tralicciate.html">Lastre tralicciate</a></li>
+            <li><a href="../prodotti/doppie-lastre.html">Doppie lastre</a></li>
+            <li><a href="../prodotti/eps.html">Elementi EPS</a></li>
+            <li><a href="../prodotti/sistema-step.html">Sistema STEP</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Azienda</h4>
+          <ul>
+            <li><a href="../chi-siamo.html">Chi siamo</a></li>
+            <li><a href="../chi-siamo.html#stabilimenti">Stabilimenti</a></li>
+            <li><a href="../chi-siamo.html#certificazioni">Certificazioni</a></li>
+            <li><a href="../lavora-con-noi.html">Lavora con noi</a></li>
+            <li><a href="../news/index.html">News</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Sedi</h4>
+          <ul>
+            <li><a href="../chi-siamo.html#stabilimenti">Fasano (BR)</a></li>
+            <li><a href="../chi-siamo.html#stabilimenti">Verdello (BG)</a></li>
+            <li><a href="../chi-siamo.html#stabilimenti">Timișoara, Romania</a></li>
+            <li><a href="../chi-siamo.html#stabilimenti">Oradea, Romania</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>&copy; 2026 Ferramati International S.r.l. Tutti i diritti riservati.</span>
+        <div class="site-footer__legal">
+          <a href="../privacy-policy.html">Privacy Policy</a>
+          <a href="../cookie-policy.html">Cookie Policy</a>
+          <a href="../condizioni-vendita.html">Condizioni di vendita</a>
+        </div>
+        <div class="lang-switcher">
+          <a href="#" class="active">IT</a>
+          <span class="sep">/</span>
+          <a href="../../index.html">EN</a>
+          <span class="sep">/</span>
+          <a href="../../ro/index.html">RO</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/mobile-menu.js"></script>
+  <script src="../../assets/js/area-tecnica.js"></script>
+</body>
+</html>

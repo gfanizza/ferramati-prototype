@@ -2,13 +2,15 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <meta name="robots" content="noindex, nofollow"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Area tecnica — Schede tecniche e certificazioni | Ferramati</title>
-  <meta name="description" content="Area tecnica Ferramati: scarica schede prodotto, certificazioni CE, guide di posa e documentazione tecnica. Accesso riservato a progettisti, imprese e general contractor.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Area tecnica Ferramati | Schede tecniche, certificazioni e guide di posa</title>
+  <meta name="description" content="Registrati all'area tecnica Ferramati per accedere a schede prodotto, certificazioni, guide di posa e documentazione tecnica per progettisti, imprese e professionisti dell'edilizia.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../assets/css/design-system.css">
+  <link rel="stylesheet" href="../../assets/css/area-tecnica.css">
   <link rel="stylesheet" href="../../assets/css/mobile-menu.css">
 </head>
 <body>
@@ -35,7 +37,7 @@
           <span class="sep">/</span>
           <a href="../../ro/index.html">RO</a>
         </div>
-        <a href="../contatti.html" class="btn btn--primary btn--sm">Invia elaborati tecnici</a>
+        <a href="#registrazione" class="btn btn--primary btn--sm">Area tecnica</a>
         <button class="menu-toggle" aria-label="Apri menu" aria-expanded="false" aria-controls="mobile-menu">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
             <line x1="2" y1="5" x2="18" y2="5"/>
@@ -67,272 +69,601 @@
     </nav>
     <div class="mobile-menu__footer">
       <div class="lang-switcher"><a href="#" class="active">IT</a><span class="sep">/</span><a href="../../index.html">EN</a><span class="sep">/</span><a href="../../ro/index.html">RO</a></div>
-      <a href="../contatti.html" class="btn btn--primary" style="width:100%; justify-content:center;">Invia elaborati tecnici</a>
+      <a href="#registrazione" class="btn btn--primary" style="width:100%; justify-content:center;">Registrati all'area tecnica</a>
     </div>
   </div>
 
   <!-- BREADCRUMB -->
-  <nav class="breadcrumb">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
     <div class="container">
       <a href="../index.html">Home</a>
       <span>/</span>
-      <span>Area tecnica</span>
+      <span aria-current="page">Area tecnica</span>
     </div>
   </nav>
 
-  <!-- ════════════════════════════════════════════════════════════════
-       SEZIONE PRINCIPALE: FORM (sx) + WORKFLOW (dx)
-       ════════════════════════════════════════════════════════════════ -->
-  <section class="tech-section">
+  <!-- ═══════════════════════════════════════════════════════
+       HERO — TechnicalAreaHero
+       ═══════════════════════════════════════════════════════ -->
+  <section class="ta-hero" id="hero">
     <div class="container">
-      <div class="tech-layout">
+      <div class="ta-hero__inner">
+        <div class="ta-hero__content">
+          <p class="ta-hero__eyebrow">Area tecnica Ferramati</p>
 
-        <!-- COLONNA SINISTRA: FORM -->
-        <div>
-          <p class="eyebrow mb-md">Richiedi documentazione</p>
-          <h1 class="mb-lg">Accedi all'area tecnica</h1>
-          <p style="color: var(--steel-600); font-size: var(--fs-body-lg); line-height: 1.6; margin-bottom: 2rem;">
-            Compila il modulo per ricevere schede tecniche, certificazioni e guide di posa via email.
+          <h1>Accedi alla documentazione<br>tecnica <em>Ferramati</em></h1>
+
+          <p class="ta-hero__desc">
+            Registrati gratuitamente all'area tecnica per consultare e scaricare schede prodotto, certificazioni, guide di posa, brochure e documentazione riservata a progettisti, imprese e professionisti dell'edilizia.
           </p>
 
-          <form action="#" method="post" style="display: flex; flex-direction: column; gap: 1.5rem;">
+          <div class="ta-hero__actions">
+            <a href="#registrazione" class="btn btn--primary">Registrati all'area tecnica</a>
+            <a href="#registrazione" class="btn btn--outline-white" data-tab="login">Accedi al tuo account</a>
+            <a href="invia-elaborati.html" class="btn btn--ghost">Invia elaborati tecnici</a>
+          </div>
 
-            <!-- Riga 1: Nome + Cognome -->
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-              <div>
-                <label for="nome" style="display:block; font-family: var(--font-mono); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: var(--ls-label); color: var(--forge-dark); margin-bottom: 0.5rem; font-weight: 500;">Nome *</label>
-                <input type="text" id="nome" name="nome" required
-                       style="width:100%; padding: 0.75rem 1rem; border: 1px solid var(--steel-300, #D8D8D2); border-radius: var(--radius-md); font-family: var(--font-body); font-size: var(--fs-body); background: var(--pure-white);">
-              </div>
-              <div>
-                <label for="cognome" style="display:block; font-family: var(--font-mono); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: var(--ls-label); color: var(--forge-dark); margin-bottom: 0.5rem; font-weight: 500;">Cognome *</label>
-                <input type="text" id="cognome" name="cognome" required
-                       style="width:100%; padding: 0.75rem 1rem; border: 1px solid var(--steel-300, #D8D8D2); border-radius: var(--radius-md); font-family: var(--font-body); font-size: var(--fs-body); background: var(--pure-white);">
-              </div>
-            </div>
+          <p class="ta-hero__note">
+            L'accesso è riservato a utenti professionali. Alcuni documenti sono disponibili subito dopo la registrazione, altri possono richiedere una verifica da parte dell'ufficio tecnico.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            <!-- Riga 2: Azienda + Ruolo -->
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-              <div>
-                <label for="azienda" style="display:block; font-family: var(--font-mono); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: var(--ls-label); color: var(--forge-dark); margin-bottom: 0.5rem; font-weight: 500;">Azienda *</label>
-                <input type="text" id="azienda" name="azienda" required
-                       style="width:100%; padding: 0.75rem 1rem; border: 1px solid var(--steel-300, #D8D8D2); border-radius: var(--radius-md); font-family: var(--font-body); font-size: var(--fs-body); background: var(--pure-white);">
-              </div>
-              <div>
-                <label for="ruolo" style="display:block; font-family: var(--font-mono); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: var(--ls-label); color: var(--forge-dark); margin-bottom: 0.5rem; font-weight: 500;">Ruolo *</label>
-                <select id="ruolo" name="ruolo" required
-                        style="width:100%; padding: 0.75rem 1rem; border: 1px solid var(--steel-300, #D8D8D2); border-radius: var(--radius-md); font-family: var(--font-body); font-size: var(--fs-body); background: var(--pure-white); appearance: auto;">
-                  <option value="">Seleziona</option>
-                  <option value="ingegnere-strutturista">Ingegnere strutturista</option>
-                  <option value="progettista">Progettista / Architetto</option>
-                  <option value="direttore-lavori">Direttore lavori</option>
-                  <option value="impresa-edile">Impresa edile</option>
-                  <option value="general-contractor">General contractor</option>
-                  <option value="ufficio-acquisti">Ufficio acquisti</option>
-                  <option value="altro">Altro</option>
-                </select>
-              </div>
-            </div>
+  <!-- ═══════════════════════════════════════════════════════
+       COSA TROVI — TechnicalAreaBenefits
+       ═══════════════════════════════════════════════════════ -->
+  <section class="ta-benefits" id="benefici">
+    <div class="container">
+      <div class="ta-section-head">
+        <p class="eyebrow">Cosa trovi nell'area tecnica</p>
+        <h2>Documentazione tecnica completa per il tuo progetto</h2>
+      </div>
 
-            <!-- Riga 3: Email + Telefono -->
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-              <div>
-                <label for="email" style="display:block; font-family: var(--font-mono); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: var(--ls-label); color: var(--forge-dark); margin-bottom: 0.5rem; font-weight: 500;">Email aziendale *</label>
-                <input type="email" id="email" name="email" required
-                       style="width:100%; padding: 0.75rem 1rem; border: 1px solid var(--steel-300, #D8D8D2); border-radius: var(--radius-md); font-family: var(--font-body); font-size: var(--fs-body); background: var(--pure-white);">
-              </div>
-              <div>
-                <label for="telefono" style="display:block; font-family: var(--font-mono); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: var(--ls-label); color: var(--forge-dark); margin-bottom: 0.5rem; font-weight: 500;">Telefono</label>
-                <input type="tel" id="telefono" name="telefono"
-                       style="width:100%; padding: 0.75rem 1rem; border: 1px solid var(--steel-300, #D8D8D2); border-radius: var(--radius-md); font-family: var(--font-body); font-size: var(--fs-body); background: var(--pure-white);">
-              </div>
-            </div>
+      <div class="ta-benefits__grid">
+        <div class="ta-benefit-card">
+          <div class="ta-benefit-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          </div>
+          <h4 class="ta-benefit-card__title">Schede tecniche</h4>
+          <p class="ta-benefit-card__desc">Dati dimensionali, prestazioni meccaniche e specifiche di ogni prodotto.</p>
+        </div>
 
-            <!-- Documenti richiesti -->
-            <div>
-              <label style="display:block; font-family: var(--font-mono); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: var(--ls-label); color: var(--forge-dark); margin-bottom: 0.75rem; font-weight: 500;">Documenti richiesti *</label>
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.625rem;">
-                <label style="display:flex; align-items:center; gap: 0.5rem; font-family: var(--font-body); font-size: var(--fs-sm); color: var(--forge-dark); cursor:pointer;"><input type="checkbox" name="documenti[]" value="ferro-sagomato" style="width:16px; height:16px; accent-color: var(--color-safety-orange);"> Ferro sagomato</label>
-                <label style="display:flex; align-items:center; gap: 0.5rem; font-family: var(--font-body); font-size: var(--fs-sm); color: var(--forge-dark); cursor:pointer;"><input type="checkbox" name="documenti[]" value="fercass" style="width:16px; height:16px; accent-color: var(--color-safety-orange);"> FERCASS</label>
-                <label style="display:flex; align-items:center; gap: 0.5rem; font-family: var(--font-body); font-size: var(--fs-sm); color: var(--forge-dark); cursor:pointer;"><input type="checkbox" name="documenti[]" value="lastre-tralicciate" style="width:16px; height:16px; accent-color: var(--color-safety-orange);"> Lastre tralicciate</label>
-                <label style="display:flex; align-items:center; gap: 0.5rem; font-family: var(--font-body); font-size: var(--fs-sm); color: var(--forge-dark); cursor:pointer;"><input type="checkbox" name="documenti[]" value="doppie-lastre" style="width:16px; height:16px; accent-color: var(--color-safety-orange);"> Doppie lastre</label>
-                <label style="display:flex; align-items:center; gap: 0.5rem; font-family: var(--font-body); font-size: var(--fs-sm); color: var(--forge-dark); cursor:pointer;"><input type="checkbox" name="documenti[]" value="eps" style="width:16px; height:16px; accent-color: var(--color-safety-orange);"> Elementi EPS</label>
-                <label style="display:flex; align-items:center; gap: 0.5rem; font-family: var(--font-body); font-size: var(--fs-sm); color: var(--forge-dark); cursor:pointer;"><input type="checkbox" name="documenti[]" value="sistema-step" style="width:16px; height:16px; accent-color: var(--color-safety-orange);"> Sistema STEP</label>
-                <label style="display:flex; align-items:center; gap: 0.5rem; font-family: var(--font-body); font-size: var(--fs-sm); color: var(--forge-dark); cursor:pointer;"><input type="checkbox" name="documenti[]" value="brochure" style="width:16px; height:16px; accent-color: var(--color-safety-orange);"> Brochure corporate</label>
-                <label style="display:flex; align-items:center; gap: 0.5rem; font-family: var(--font-body); font-size: var(--fs-sm); color: var(--forge-dark); cursor:pointer;"><input type="checkbox" name="documenti[]" value="certificazioni" style="width:16px; height:16px; accent-color: var(--color-safety-orange);"> Certificazioni</label>
-              </div>
-            </div>
+        <div class="ta-benefit-card">
+          <div class="ta-benefit-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h4 class="ta-benefit-card__title">Certificazioni</h4>
+          <p class="ta-benefit-card__desc">CE, NTC 2018, ISO 9001 e certificazioni specifiche per prodotto.</p>
+        </div>
 
-            <!-- Privacy — visivamente separata dai checkbox prodotto -->
-            <div style="margin-top: 0.5rem; padding-top: 1.5rem; border-top: 1px solid var(--steel-300, #D8D8D2);">
-              <label style="display:flex; align-items:flex-start; gap: 0.75rem; cursor:pointer; line-height: 1.5;">
-                <input type="checkbox" name="privacy" required
-                       style="width: 20px; height: 20px; min-width: 20px; margin-top: 2px; accent-color: var(--color-blueprint-blue);">
-                <span style="font-family: var(--font-body); font-size: var(--fs-sm); color: var(--steel-600);">
-                  Acconsento al trattamento dei dati personali per l'invio della documentazione richiesta e per comunicazioni di natura tecnico-commerciale da parte di Ferramati International S.r.l., ai sensi del Reg. UE 2016/679.
-                  <a href="../privacy-policy.html" style="color: var(--color-blueprint-blue); text-decoration: underline;">Leggi l'informativa completa</a> *
-                </span>
+        <div class="ta-benefit-card">
+          <div class="ta-benefit-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+          </div>
+          <h4 class="ta-benefit-card__title">Guide di posa</h4>
+          <p class="ta-benefit-card__desc">Istruzioni operative per la corretta installazione in cantiere.</p>
+        </div>
+
+        <div class="ta-benefit-card">
+          <div class="ta-benefit-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+          </div>
+          <h4 class="ta-benefit-card__title">Brochure</h4>
+          <p class="ta-benefit-card__desc">Presentazioni prodotto e cataloghi commerciali aggiornati.</p>
+        </div>
+
+        <div class="ta-benefit-card">
+          <div class="ta-benefit-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <h4 class="ta-benefit-card__title">Manuali tecnici</h4>
+          <p class="ta-benefit-card__desc">Documentazione completa su sistemi e soluzioni costruttive.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       COME FUNZIONA — HowItWorksSteps
+       ═══════════════════════════════════════════════════════ -->
+  <section class="ta-how" id="come-funziona">
+    <div class="container">
+      <div class="ta-section-head">
+        <p class="eyebrow">Come funziona</p>
+        <h2>Tre passaggi per accedere alla documentazione</h2>
+      </div>
+
+      <div class="ta-how__steps">
+        <div class="ta-step">
+          <span class="ta-step__number">1</span>
+          <h4 class="ta-step__title">Registrati</h4>
+          <p class="ta-step__desc">Crea il tuo account inserendo i dati professionali e verifica l'indirizzo email aziendale. La registrazione è gratuita.</p>
+        </div>
+        <div class="ta-step">
+          <span class="ta-step__number">2</span>
+          <h4 class="ta-step__title">Consulta il catalogo</h4>
+          <p class="ta-step__desc">Accedi a schede tecniche, certificazioni, guide di posa, brochure e documenti prodotto organizzati per categoria.</p>
+        </div>
+        <div class="ta-step">
+          <span class="ta-step__number">3</span>
+          <h4 class="ta-step__title">Scarica o richiedi supporto</h4>
+          <p class="ta-step__desc">Scarica i documenti disponibili oppure invia elaborati tecnici per ricevere un supporto dedicato dal team Ferramati.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       CATALOGO DOCUMENTI — DocumentCatalog
+       ═══════════════════════════════════════════════════════ -->
+  <section class="ta-catalog" id="catalogo">
+    <div class="container">
+      <div class="ta-section-head">
+        <p class="eyebrow" style="color:var(--color-blueprint-blue);">Catalogo documenti</p>
+        <h2>Documentazione tecnica disponibile</h2>
+        <p>Filtra per prodotto, tipologia o livello di accesso. I documenti con badge arancione richiedono registrazione gratuita.</p>
+      </div>
+
+      <!-- FILTER BAR -->
+      <div class="ta-filter-bar" role="search" aria-label="Filtri catalogo documenti">
+        <label>
+          Prodotto
+          <select id="filter-product" aria-label="Filtra per prodotto">
+            <option value="">Tutti</option>
+            <option value="ferro-sagomato">Ferro sagomato</option>
+            <option value="fercass">FERCASS</option>
+            <option value="lastre-tralicciate">Lastre tralicciate</option>
+            <option value="doppie-lastre">Doppie lastre</option>
+            <option value="eps">Elementi EPS</option>
+            <option value="sistema-step">Sistema STEP</option>
+            <option value="corporate">Corporate</option>
+            <option value="certificazioni">Certificazioni</option>
+          </select>
+        </label>
+        <label>
+          Tipo documento
+          <select id="filter-type" aria-label="Filtra per tipo documento">
+            <option value="">Tutti</option>
+            <option value="scheda-tecnica">Scheda tecnica</option>
+            <option value="certificazione">Certificazione</option>
+            <option value="guida-posa">Guida di posa</option>
+            <option value="manuale">Manuale</option>
+            <option value="brochure">Brochure</option>
+          </select>
+        </label>
+        <label>
+          Accesso
+          <select id="filter-access" aria-label="Filtra per livello accesso">
+            <option value="">Tutti</option>
+            <option value="public">Pubblico</option>
+            <option value="registered">Registrazione richiesta</option>
+            <option value="approval">Approvazione richiesta</option>
+          </select>
+        </label>
+        <label>
+          Lingua
+          <select id="filter-lang" aria-label="Filtra per lingua">
+            <option value="">Tutte</option>
+            <option value="it">Italiano</option>
+            <option value="en">English</option>
+            <option value="ro">Română</option>
+          </select>
+        </label>
+      </div>
+
+      <!-- DOCUMENT CARDS GRID -->
+      <div class="ta-catalog__grid" id="catalog-grid">
+
+        <article class="ta-doc-card" data-product="corporate" data-type="brochure" data-access="public" data-lang="it">
+          <div class="ta-doc-card__header">
+            <h3 class="ta-doc-card__title">Brochure Ferramati 2026</h3>
+            <span class="ta-badge ta-badge--public">Pubblico</span>
+          </div>
+          <p class="ta-doc-card__desc">Presentazione corporate del gruppo Ferramati: stabilimenti, prodotti, mercati e capacità produttiva.</p>
+          <div class="ta-doc-card__meta">
+            <span class="ta-doc-card__meta-item">Prodotto: <span>Corporate</span></span>
+            <span class="ta-doc-card__meta-item">Tipo: <span>Brochure</span></span>
+            <span class="ta-doc-card__meta-item">Lingua: <span>IT</span></span>
+            <span class="ta-doc-card__meta-item">Formato: <span>PDF</span></span>
+          </div>
+          <div class="ta-doc-card__footer">
+            <a href="#" class="btn btn--primary btn--small">Scarica PDF</a>
+          </div>
+        </article>
+
+        <article class="ta-doc-card" data-product="ferro-sagomato" data-type="scheda-tecnica" data-access="registered" data-lang="it">
+          <div class="ta-doc-card__header">
+            <h3 class="ta-doc-card__title">Scheda tecnica B450C</h3>
+            <span class="ta-badge ta-badge--registered">Registrazione</span>
+          </div>
+          <p class="ta-doc-card__desc">Dati meccanici, chimici e dimensionali dell'acciaio B450C per ferro sagomato e assemblato.</p>
+          <div class="ta-doc-card__meta">
+            <span class="ta-doc-card__meta-item">Prodotto: <span>Ferro sagomato</span></span>
+            <span class="ta-doc-card__meta-item">Tipo: <span>Scheda tecnica</span></span>
+            <span class="ta-doc-card__meta-item">Lingua: <span>IT</span></span>
+            <span class="ta-doc-card__meta-item">Formato: <span>PDF</span></span>
+          </div>
+          <div class="ta-doc-card__footer">
+            <a href="#registrazione" class="btn btn--primary btn--small">Registrati per scaricare</a>
+          </div>
+        </article>
+
+        <article class="ta-doc-card" data-product="ferro-sagomato" data-type="certificazione" data-access="registered" data-lang="it">
+          <div class="ta-doc-card__header">
+            <h3 class="ta-doc-card__title">Certificato CE — Acciaio</h3>
+            <span class="ta-badge ta-badge--registered">Registrazione</span>
+          </div>
+          <p class="ta-doc-card__desc">Dichiarazione di conformità CE per acciaio da cemento armato secondo normativa UNI EN 10080.</p>
+          <div class="ta-doc-card__meta">
+            <span class="ta-doc-card__meta-item">Prodotto: <span>Ferro sagomato</span></span>
+            <span class="ta-doc-card__meta-item">Tipo: <span>Certificazione</span></span>
+            <span class="ta-doc-card__meta-item">Lingua: <span>IT</span></span>
+            <span class="ta-doc-card__meta-item">Formato: <span>PDF</span></span>
+          </div>
+          <div class="ta-doc-card__footer">
+            <a href="#registrazione" class="btn btn--primary btn--small">Registrati per scaricare</a>
+          </div>
+        </article>
+
+        <article class="ta-doc-card" data-product="fercass" data-type="scheda-tecnica" data-access="registered" data-lang="it">
+          <div class="ta-doc-card__header">
+            <h3 class="ta-doc-card__title">Scheda tecnica FERCASS</h3>
+            <span class="ta-badge ta-badge--registered">Registrazione</span>
+          </div>
+          <p class="ta-doc-card__desc">Cassero metallico a perdere per fondazioni, plinti, travi, muri e opere in cemento armato.</p>
+          <div class="ta-doc-card__meta">
+            <span class="ta-doc-card__meta-item">Prodotto: <span>FERCASS</span></span>
+            <span class="ta-doc-card__meta-item">Tipo: <span>Scheda tecnica</span></span>
+            <span class="ta-doc-card__meta-item">Lingua: <span>IT</span></span>
+            <span class="ta-doc-card__meta-item">Formato: <span>PDF</span></span>
+          </div>
+          <div class="ta-doc-card__footer">
+            <a href="#registrazione" class="btn btn--primary btn--small">Registrati per scaricare</a>
+          </div>
+        </article>
+
+        <article class="ta-doc-card" data-product="fercass" data-type="guida-posa" data-access="registered" data-lang="it">
+          <div class="ta-doc-card__header">
+            <h3 class="ta-doc-card__title">Guida di posa FERCASS</h3>
+            <span class="ta-badge ta-badge--registered">Registrazione</span>
+          </div>
+          <p class="ta-doc-card__desc">Istruzioni per la corretta installazione e il getto del cassero metallico a perdere FERCASS.</p>
+          <div class="ta-doc-card__meta">
+            <span class="ta-doc-card__meta-item">Prodotto: <span>FERCASS</span></span>
+            <span class="ta-doc-card__meta-item">Tipo: <span>Guida di posa</span></span>
+            <span class="ta-doc-card__meta-item">Lingua: <span>IT</span></span>
+            <span class="ta-doc-card__meta-item">Formato: <span>PDF</span></span>
+          </div>
+          <div class="ta-doc-card__footer">
+            <a href="#registrazione" class="btn btn--primary btn--small">Registrati per scaricare</a>
+          </div>
+        </article>
+
+        <article class="ta-doc-card" data-product="lastre-tralicciate" data-type="scheda-tecnica" data-access="registered" data-lang="it">
+          <div class="ta-doc-card__header">
+            <h3 class="ta-doc-card__title">Scheda tecnica lastre tralicciate</h3>
+            <span class="ta-badge ta-badge--registered">Registrazione</span>
+          </div>
+          <p class="ta-doc-card__desc">Specifiche dimensionali, portate e armatura delle lastre tralicciate in c.a. precompresso.</p>
+          <div class="ta-doc-card__meta">
+            <span class="ta-doc-card__meta-item">Prodotto: <span>Lastre tralicciate</span></span>
+            <span class="ta-doc-card__meta-item">Tipo: <span>Scheda tecnica</span></span>
+            <span class="ta-doc-card__meta-item">Lingua: <span>IT</span></span>
+            <span class="ta-doc-card__meta-item">Formato: <span>PDF</span></span>
+          </div>
+          <div class="ta-doc-card__footer">
+            <a href="#registrazione" class="btn btn--primary btn--small">Registrati per scaricare</a>
+          </div>
+        </article>
+
+        <article class="ta-doc-card" data-product="lastre-tralicciate" data-type="certificazione" data-access="approval" data-lang="it">
+          <div class="ta-doc-card__header">
+            <h3 class="ta-doc-card__title">Certificato CE — Prefabbricati</h3>
+            <span class="ta-badge ta-badge--approval">Approvazione</span>
+          </div>
+          <p class="ta-doc-card__desc">Dichiarazione di prestazione e marcatura CE per elementi prefabbricati in calcestruzzo armato.</p>
+          <div class="ta-doc-card__meta">
+            <span class="ta-doc-card__meta-item">Prodotto: <span>Lastre tralicciate</span></span>
+            <span class="ta-doc-card__meta-item">Tipo: <span>Certificazione</span></span>
+            <span class="ta-doc-card__meta-item">Lingua: <span>IT</span></span>
+            <span class="ta-doc-card__meta-item">Formato: <span>PDF</span></span>
+          </div>
+          <div class="ta-doc-card__footer">
+            <a href="#registrazione" class="btn btn--secondary btn--small">Registrati e richiedi accesso</a>
+          </div>
+        </article>
+
+        <article class="ta-doc-card" data-product="doppie-lastre" data-type="scheda-tecnica" data-access="registered" data-lang="it">
+          <div class="ta-doc-card__header">
+            <h3 class="ta-doc-card__title">Scheda tecnica + Guida di posa doppie lastre</h3>
+            <span class="ta-badge ta-badge--registered">Registrazione</span>
+          </div>
+          <p class="ta-doc-card__desc">Documentazione tecnica completa per pareti e solai in doppia lastra con traliccio elettrosaldato.</p>
+          <div class="ta-doc-card__meta">
+            <span class="ta-doc-card__meta-item">Prodotto: <span>Doppie lastre</span></span>
+            <span class="ta-doc-card__meta-item">Tipo: <span>Scheda + Guida</span></span>
+            <span class="ta-doc-card__meta-item">Lingua: <span>IT</span></span>
+            <span class="ta-doc-card__meta-item">Formato: <span>PDF</span></span>
+          </div>
+          <div class="ta-doc-card__footer">
+            <a href="#registrazione" class="btn btn--primary btn--small">Registrati per scaricare</a>
+          </div>
+        </article>
+
+        <article class="ta-doc-card" data-product="eps" data-type="scheda-tecnica" data-access="registered" data-lang="it">
+          <div class="ta-doc-card__header">
+            <h3 class="ta-doc-card__title">Scheda tecnica EPS</h3>
+            <span class="ta-badge ta-badge--registered">Registrazione</span>
+          </div>
+          <p class="ta-doc-card__desc">Caratteristiche termiche, meccaniche e dimensionali degli elementi in polistirene espanso sinterizzato.</p>
+          <div class="ta-doc-card__meta">
+            <span class="ta-doc-card__meta-item">Prodotto: <span>Elementi EPS</span></span>
+            <span class="ta-doc-card__meta-item">Tipo: <span>Scheda tecnica</span></span>
+            <span class="ta-doc-card__meta-item">Lingua: <span>IT</span></span>
+            <span class="ta-doc-card__meta-item">Formato: <span>PDF</span></span>
+          </div>
+          <div class="ta-doc-card__footer">
+            <a href="#registrazione" class="btn btn--primary btn--small">Registrati per scaricare</a>
+          </div>
+        </article>
+
+        <article class="ta-doc-card" data-product="sistema-step" data-type="manuale" data-access="registered" data-lang="it">
+          <div class="ta-doc-card__header">
+            <h3 class="ta-doc-card__title">Scheda tecnica + Manuale di posa Sistema STEP</h3>
+            <span class="ta-badge ta-badge--registered">Registrazione</span>
+          </div>
+          <p class="ta-doc-card__desc">Sistema costruttivo con blocchi cassero in EPS e getto in opera. Manuale completo con dettagli esecutivi.</p>
+          <div class="ta-doc-card__meta">
+            <span class="ta-doc-card__meta-item">Prodotto: <span>Sistema STEP</span></span>
+            <span class="ta-doc-card__meta-item">Tipo: <span>Manuale</span></span>
+            <span class="ta-doc-card__meta-item">Lingua: <span>IT</span></span>
+            <span class="ta-doc-card__meta-item">Formato: <span>PDF</span></span>
+          </div>
+          <div class="ta-doc-card__footer">
+            <a href="#registrazione" class="btn btn--primary btn--small">Registrati per scaricare</a>
+          </div>
+        </article>
+
+        <article class="ta-doc-card" data-product="certificazioni" data-type="certificazione" data-access="approval" data-lang="it">
+          <div class="ta-doc-card__header">
+            <h3 class="ta-doc-card__title">CE + NTC 2018 + ISO 9001:2015</h3>
+            <span class="ta-badge ta-badge--approval">Approvazione</span>
+          </div>
+          <p class="ta-doc-card__desc">Pacchetto completo di certificazioni aziendali: marcatura CE, conformità NTC 2018, sistema qualità ISO 9001.</p>
+          <div class="ta-doc-card__meta">
+            <span class="ta-doc-card__meta-item">Prodotto: <span>Certificazioni</span></span>
+            <span class="ta-doc-card__meta-item">Tipo: <span>Certificazione</span></span>
+            <span class="ta-doc-card__meta-item">Lingua: <span>IT</span></span>
+            <span class="ta-doc-card__meta-item">Formato: <span>PDF</span></span>
+          </div>
+          <div class="ta-doc-card__footer">
+            <a href="#registrazione" class="btn btn--secondary btn--small">Registrati e richiedi accesso</a>
+          </div>
+        </article>
+
+        <article class="ta-doc-card" data-product="corporate" data-type="brochure" data-access="public" data-lang="it">
+          <div class="ta-doc-card__header">
+            <h3 class="ta-doc-card__title">Company Profile Ferramati</h3>
+            <span class="ta-badge ta-badge--public">Pubblico</span>
+          </div>
+          <p class="ta-doc-card__desc">Profilo aziendale del gruppo: storia, valori, capacità produttiva e progetti di riferimento.</p>
+          <div class="ta-doc-card__meta">
+            <span class="ta-doc-card__meta-item">Prodotto: <span>Corporate</span></span>
+            <span class="ta-doc-card__meta-item">Tipo: <span>Brochure</span></span>
+            <span class="ta-doc-card__meta-item">Lingua: <span>IT</span></span>
+            <span class="ta-doc-card__meta-item">Formato: <span>PDF</span></span>
+          </div>
+          <div class="ta-doc-card__footer">
+            <a href="#" class="btn btn--primary btn--small">Scarica PDF</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       REGISTRAZIONE / LOGIN — SignupForm + LoginForm
+       ═══════════════════════════════════════════════════════ -->
+  <section class="ta-auth" id="registrazione">
+    <div class="container">
+      <div class="ta-auth__layout">
+
+        <div>
+          <div class="ta-auth-tabs" role="tablist" aria-label="Accesso area tecnica">
+            <button class="ta-auth-tab active" role="tab" aria-selected="true" aria-controls="panel-register" id="tab-register">Registrati</button>
+            <button class="ta-auth-tab" role="tab" aria-selected="false" aria-controls="panel-login" id="tab-login">Accedi</button>
+          </div>
+
+          <!-- REGISTRATION PANEL -->
+          <div class="ta-auth-panel active" id="panel-register" role="tabpanel" aria-labelledby="tab-register">
+            <form class="ta-form" id="signup-form" novalidate>
+              <div class="ta-form__row ta-form__row--2">
+                <div class="ta-form__group">
+                  <label class="ta-form__label" for="reg-nome">Nome *</label>
+                  <input class="ta-form__input" type="text" id="reg-nome" name="nome" required autocomplete="given-name">
+                </div>
+                <div class="ta-form__group">
+                  <label class="ta-form__label" for="reg-cognome">Cognome *</label>
+                  <input class="ta-form__input" type="text" id="reg-cognome" name="cognome" required autocomplete="family-name">
+                </div>
+              </div>
+              <div class="ta-form__row ta-form__row--2">
+                <div class="ta-form__group">
+                  <label class="ta-form__label" for="reg-email">Email aziendale *</label>
+                  <input class="ta-form__input" type="email" id="reg-email" name="email" required autocomplete="email">
+                </div>
+                <div class="ta-form__group">
+                  <label class="ta-form__label" for="reg-azienda">Azienda *</label>
+                  <input class="ta-form__input" type="text" id="reg-azienda" name="azienda" required autocomplete="organization">
+                </div>
+              </div>
+              <div class="ta-form__row ta-form__row--2">
+                <div class="ta-form__group">
+                  <label class="ta-form__label" for="reg-ruolo">Ruolo *</label>
+                  <select class="ta-form__select" id="reg-ruolo" name="ruolo" required>
+                    <option value="">Seleziona il tuo ruolo</option>
+                    <option value="progettista-ingegnere">Progettista / Ingegnere</option>
+                    <option value="studio-tecnico">Studio tecnico</option>
+                    <option value="impresa-edile">Impresa edile</option>
+                    <option value="general-contractor">General contractor</option>
+                    <option value="direttore-lavori">Direttore lavori</option>
+                    <option value="ufficio-acquisti">Ufficio acquisti</option>
+                    <option value="responsabile-cantiere">Responsabile tecnico di cantiere</option>
+                    <option value="altro">Altro</option>
+                  </select>
+                </div>
+                <div class="ta-form__group">
+                  <label class="ta-form__label" for="reg-paese">Paese *</label>
+                  <select class="ta-form__select" id="reg-paese" name="paese" required>
+                    <option value="">Seleziona</option>
+                    <option value="italia">Italia</option>
+                    <option value="romania">Romania</option>
+                    <option value="altro">Altro</option>
+                  </select>
+                </div>
+              </div>
+              <div class="ta-form__row ta-form__row--2">
+                <div class="ta-form__group">
+                  <label class="ta-form__label" for="reg-password">Password *</label>
+                  <input class="ta-form__input" type="password" id="reg-password" name="password" required autocomplete="new-password" minlength="8">
+                  <span class="ta-form__hint">Minimo 8 caratteri</span>
+                </div>
+                <div class="ta-form__group">
+                  <label class="ta-form__label" for="reg-password2">Conferma password *</label>
+                  <input class="ta-form__input" type="password" id="reg-password2" name="password_confirm" required autocomplete="new-password">
+                </div>
+              </div>
+
+              <hr class="ta-form__divider">
+
+              <label class="ta-form__checkbox">
+                <input type="checkbox" name="privacy" required>
+                <span>Dichiaro di aver letto l'<a href="../privacy-policy.html">informativa privacy</a> e acconsento al trattamento dei dati personali per la gestione della registrazione e l'accesso all'area tecnica Ferramati. *</span>
               </label>
+              <label class="ta-form__checkbox">
+                <input type="checkbox" name="marketing">
+                <span>Acconsento a ricevere comunicazioni tecnico-commerciali, aggiornamenti prodotto e contenuti informativi da Ferramati. (facoltativo)</span>
+              </label>
+
+              <button type="submit" class="btn btn--primary" style="width:100%; justify-content:center;">Crea il tuo account gratuito</button>
+              <p class="ta-form__hint" style="text-align:center;">Hai già un account? <a href="#" id="switch-to-login" style="color:var(--color-safety-orange); text-decoration:underline;">Accedi</a></p>
+            </form>
+          </div>
+
+          <!-- LOGIN PANEL -->
+          <div class="ta-auth-panel" id="panel-login" role="tabpanel" aria-labelledby="tab-login">
+            <form class="ta-form" id="login-form" novalidate>
+              <div class="ta-form__group">
+                <label class="ta-form__label" for="login-email">Email *</label>
+                <input class="ta-form__input" type="email" id="login-email" name="email" required autocomplete="email">
+              </div>
+              <div class="ta-form__group">
+                <label class="ta-form__label" for="login-password">Password *</label>
+                <input class="ta-form__input" type="password" id="login-password" name="password" required autocomplete="current-password">
+              </div>
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <label class="ta-form__checkbox" style="margin:0;">
+                  <input type="checkbox" name="remember">
+                  <span>Ricordami</span>
+                </label>
+                <a href="#" id="forgot-password-link" style="font-size:var(--fs-sm); color:var(--color-blueprint-blue); text-decoration:underline;">Password dimenticata?</a>
+              </div>
+              <button type="submit" class="btn btn--primary" style="width:100%; justify-content:center;">Accedi all'area tecnica</button>
+              <p class="ta-form__hint" style="text-align:center;">Non hai un account? <a href="#" id="switch-to-register" style="color:var(--color-safety-orange); text-decoration:underline;">Registrati gratuitamente</a></p>
+            </form>
+
+            <div id="password-reset" style="display:none; margin-top:var(--s-xl); padding-top:var(--s-xl); border-top:1px solid var(--steel-200);">
+              <h4 style="margin-bottom:var(--s-sm);">Recupera password</h4>
+              <p class="ta-form__hint" style="margin-bottom:var(--s-sm);">Inserisci l'email utilizzata in fase di registrazione. Ti invieremo un link per impostare una nuova password.</p>
+              <form class="ta-form">
+                <div class="ta-form__group">
+                  <label class="ta-form__label" for="reset-email">Email *</label>
+                  <input class="ta-form__input" type="email" id="reset-email" name="email" required autocomplete="email">
+                </div>
+                <button type="submit" class="btn btn--secondary" style="width:100%; justify-content:center;">Invia link di recupero</button>
+              </form>
             </div>
-
-            <!-- Submit -->
-            <button type="submit" class="btn btn--primary" style="width: 100%; justify-content: center; margin-top: 0.5rem;">
-              Richiedi documentazione
-            </button>
-
-          </form>
+          </div>
         </div>
 
-        <!-- COLONNA DESTRA: WORKFLOW + INFO -->
-        <div>
-          <p class="eyebrow mb-md">Come funziona</p>
-          <h2 class="mb-lg">Documentazione riservata ai professionisti</h2>
-          <p style="color: var(--steel-600); font-size: var(--fs-body-lg); line-height: 1.6; margin-bottom: 2.5rem;">
-            L'area tecnica Ferramati &egrave; riservata a professionisti del settore edile.
-            Compila il modulo e seleziona i documenti: l'ufficio tecnico ti invier&agrave;
-            il materiale via email entro 24 ore lavorative.
-          </p>
-
-          <div style="display: flex; flex-direction: column; gap: 2rem; margin-bottom: 3rem;">
-            <div class="service-item">
-              <h4 class="service-item__title">1. Inserisci i dati professionali</h4>
-              <p class="service-item__desc">Nome, azienda, ruolo e contatti. Servono per verificare l'appartenenza al settore e personalizzare l'invio.</p>
-            </div>
-            <div class="service-item">
-              <h4 class="service-item__title">2. Seleziona i documenti</h4>
-              <p class="service-item__desc">Schede tecniche, certificati CE, guide di posa, brochure. Puoi richiedere pi&ugrave; documenti in un'unica richiesta.</p>
-            </div>
-            <div class="service-item">
-              <h4 class="service-item__title">3. Ricevi via email</h4>
-              <p class="service-item__desc">L'ufficio tecnico invia i PDF richiesti. Per documentazione specifica o supporto progettuale, un referente ti ricontatter&agrave;.</p>
-            </div>
-          </div>
-
-          <div style="padding: 1.5rem; background: var(--forge-black, #171A1C); border-radius: var(--radius-md);">
-            <p style="font-family: var(--font-mono); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: var(--ls-label); color: var(--color-safety-orange); margin-bottom: 0.75rem;">A chi &egrave; riservata l'area tecnica</p>
-            <p style="color: var(--pure-white); font-size: var(--fs-sm); line-height: 1.6;">
-              Ingegneri strutturisti &middot; Progettisti &middot; Direttori lavori &middot; Imprese edili &middot; General contractor &middot; Uffici acquisti &middot; Studi tecnici
-            </p>
-          </div>
+        <!-- RIGHT: Info panel -->
+        <div class="ta-auth__info">
+          <p class="eyebrow" style="color:var(--color-safety-orange); margin-bottom:var(--s-md);">A chi è riservata l'area tecnica</p>
+          <h3>Accesso riservato ai professionisti dell'edilizia</h3>
+          <p>L'area tecnica Ferramati è pensata per ingegneri, progettisti, imprese edili, general contractor, direttori lavori, uffici acquisti e studi tecnici che necessitano di documentazione tecnica aggiornata o supporto progettuale.</p>
+          <ul class="ta-auth__info-list">
+            <li>Schede tecniche e certificazioni sempre aggiornate</li>
+            <li>Download immediato dei documenti autorizzati</li>
+            <li>Storico download e richieste nella tua dashboard</li>
+            <li>Supporto diretto dall'ufficio tecnico Ferramati</li>
+            <li>Invio elaborati per valutazione progettuale</li>
+            <li>Registrazione gratuita, nessun costo nascosto</li>
+          </ul>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- ════════════════════════════════════════════════════════════════
-       ELENCO DOCUMENTI DISPONIBILI
-       ════════════════════════════════════════════════════════════════ -->
-  <section class="section section--alt">
+  <!-- ═══════════════════════════════════════════════════════
+       FAQ — TechnicalAreaFAQ
+       ═══════════════════════════════════════════════════════ -->
+  <section class="ta-faq" id="faq">
     <div class="container">
-      <div class="section-head" style="margin-bottom: 3rem;">
-        <div>
-          <p class="eyebrow eyebrow--blue mb-md">Catalogo documenti</p>
-          <h2>Documentazione tecnica disponibile</h2>
-        </div>
+      <div class="ta-section-head">
+        <p class="eyebrow">Domande frequenti</p>
+        <h2>FAQ sull'area tecnica</h2>
       </div>
-
-      <div style="overflow-x: auto;">
-        <table style="width: 100%; border-collapse: collapse;">
-          <thead>
-            <tr style="border-bottom: 2px solid var(--forge-dark, #2F3437);">
-              <th style="padding: 1rem 1.25rem; font-family: var(--font-mono); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: var(--ls-label); color: var(--forge-dark); text-align: left; font-weight: 500;">Prodotto</th>
-              <th style="padding: 1rem 1.25rem; font-family: var(--font-mono); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: var(--ls-label); color: var(--forge-dark); text-align: left; font-weight: 500;">Documento</th>
-              <th style="padding: 1rem 1.25rem; font-family: var(--font-mono); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: var(--ls-label); color: var(--forge-dark); text-align: left; font-weight: 500;">Tipo</th>
-              <th style="padding: 1rem 1.25rem; font-family: var(--font-mono); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: var(--ls-label); color: var(--forge-dark); text-align: left; font-weight: 500;">Formato</th>
-            </tr>
-          </thead>
-          <tbody style="font-family: var(--font-body); font-size: var(--fs-sm);">
-            <tr style="border-bottom: 1px solid var(--steel-300, #D8D8D2);">
-              <td style="padding: 0.875rem 1.25rem; color: var(--forge-dark); font-weight: 500;">Ferro sagomato</td>
-              <td style="padding: 0.875rem 1.25rem; color: var(--forge-dark);">Scheda tecnica B450C</td>
-              <td style="padding: 0.875rem 1.25rem; color: var(--steel-600);">Scheda prodotto</td>
-              <td style="padding: 0.875rem 1.25rem;"><span style="font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--color-blueprint-blue); letter-spacing: var(--ls-data);">PDF</span></td>
-            </tr>
-            <tr style="border-bottom: 1px solid var(--steel-300, #D8D8D2);">
-              <td style="padding: 0.875rem 1.25rem; color: var(--forge-dark); font-weight: 500;">Ferro sagomato</td>
-              <td style="padding: 0.875rem 1.25rem; color: var(--forge-dark);">Certificato CE &mdash; Acciaio</td>
-              <td style="padding: 0.875rem 1.25rem; color: var(--steel-600);">Certificazione</td>
-              <td style="padding: 0.875rem 1.25rem;"><span style="font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--color-blueprint-blue); letter-spacing: var(--ls-data);">PDF</span></td>
-            </tr>
-            <tr style="border-bottom: 1px solid var(--steel-300, #D8D8D2);">
-              <td style="padding: 0.875rem 1.25rem; color: var(--forge-dark); font-weight: 500;">FERCASS</td>
-              <td style="padding: 0.875rem 1.25rem; color: var(--forge-dark);">Scheda tecnica sistema</td>
-              <td style="padding: 0.875rem 1.25rem; color: var(--steel-600);">Scheda prodotto</td>
-              <td style="padding: 0.875rem 1.25rem;"><span style="font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--color-blueprint-blue); letter-spacing: var(--ls-data);">PDF</span></td>
-            </tr>
-            <tr style="border-bottom: 1px solid var(--steel-300, #D8D8D2);">
-              <td style="padding: 0.875rem 1.25rem; color: var(--forge-dark); font-weight: 500;">FERCASS</td>
-              <td style="padding: 0.875rem 1.25rem; color: var(--forge-dark);">Guida di posa in opera</td>
-              <td style="padding: 0.875rem 1.25rem; color: var(--steel-600);">Guida di posa</td>
-              <td style="padding: 0.875rem 1.25rem;"><span style="font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--color-blueprint-blue); letter-spacing: var(--ls-data);">PDF</span></td>
-            </tr>
-            <tr style="border-bottom: 1px solid var(--steel-300, #D8D8D2);">
-              <td style="padding: 0.875rem 1.25rem; color: var(--forge-dark); font-weight: 500;">Lastre tralicciate</td>
-              <td style="padding: 0.875rem 1.25rem; color: var(--forge-dark);">Scheda tecnica lastre</td>
-              <td style="padding: 0.875rem 1.25rem; color: var(--steel-600);">Scheda prodotto</td>
-              <td style="padding: 0.875rem 1.25rem;"><span style="font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--color-blueprint-blue); letter-spacing: var(--ls-data);">PDF</span></td>
-            </tr>
-            <tr style="border-bottom: 1px solid var(--steel-300, #D8D8D2);">
-              <td style="padding: 0.875rem 1.25rem; color: var(--forge-dark); font-weight: 500;">Lastre tralicciate</td>
-              <td style="padding: 0.875rem 1.25rem; color: var(--forge-dark);">Certificato CE &mdash; Prefabbricati</td>
-              <td style="padding: 0.875rem 1.25rem; color: var(--steel-600);">Certificazione</td>
-              <td style="padding: 0.875rem 1.25rem;"><span style="font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--color-blueprint-blue); letter-spacing: var(--ls-data);">PDF</span></td>
-            </tr>
-            <tr style="border-bottom: 1px solid var(--steel-300, #D8D8D2);">
-              <td style="padding: 0.875rem 1.25rem; color: var(--forge-dark); font-weight: 500;">Doppie lastre</td>
-              <td style="padding: 0.875rem 1.25rem; color: var(--forge-dark);">Scheda tecnica + Guida di posa</td>
-              <td style="padding: 0.875rem 1.25rem; color: var(--steel-600);">Scheda + Guida</td>
-              <td style="padding: 0.875rem 1.25rem;"><span style="font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--color-blueprint-blue); letter-spacing: var(--ls-data);">PDF</span></td>
-            </tr>
-            <tr style="border-bottom: 1px solid var(--steel-300, #D8D8D2);">
-              <td style="padding: 0.875rem 1.25rem; color: var(--forge-dark); font-weight: 500;">Elementi EPS</td>
-              <td style="padding: 0.875rem 1.25rem; color: var(--forge-dark);">Scheda tecnica EPS</td>
-              <td style="padding: 0.875rem 1.25rem; color: var(--steel-600);">Scheda prodotto</td>
-              <td style="padding: 0.875rem 1.25rem;"><span style="font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--color-blueprint-blue); letter-spacing: var(--ls-data);">PDF</span></td>
-            </tr>
-            <tr style="border-bottom: 1px solid var(--steel-300, #D8D8D2);">
-              <td style="padding: 0.875rem 1.25rem; color: var(--forge-dark); font-weight: 500;">Sistema STEP</td>
-              <td style="padding: 0.875rem 1.25rem; color: var(--forge-dark);">Scheda tecnica + Manuale di posa</td>
-              <td style="padding: 0.875rem 1.25rem; color: var(--steel-600);">Scheda + Manuale</td>
-              <td style="padding: 0.875rem 1.25rem;"><span style="font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--color-blueprint-blue); letter-spacing: var(--ls-data);">PDF</span></td>
-            </tr>
-            <tr style="border-bottom: 1px solid var(--steel-300, #D8D8D2);">
-              <td style="padding: 0.875rem 1.25rem; color: var(--forge-dark); font-weight: 500;">Corporate</td>
-              <td style="padding: 0.875rem 1.25rem; color: var(--forge-dark);">Brochure Ferramati 2026</td>
-              <td style="padding: 0.875rem 1.25rem; color: var(--steel-600);">Brochure</td>
-              <td style="padding: 0.875rem 1.25rem;"><span style="font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--color-blueprint-blue); letter-spacing: var(--ls-data);">PDF</span></td>
-            </tr>
-            <tr>
-              <td style="padding: 0.875rem 1.25rem; color: var(--forge-dark); font-weight: 500;">Certificazioni</td>
-              <td style="padding: 0.875rem 1.25rem; color: var(--forge-dark);">CE + NTC 2018 + ISO 9001:2015</td>
-              <td style="padding: 0.875rem 1.25rem; color: var(--steel-600);">Certificazione</td>
-              <td style="padding: 0.875rem 1.25rem;"><span style="font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--color-blueprint-blue); letter-spacing: var(--ls-data);">PDF</span></td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="ta-faq__list">
+        <details class="ta-faq__item">
+          <summary>La registrazione è gratuita?</summary>
+          <div class="ta-faq__answer"><p>Sì, la registrazione all'area tecnica Ferramati è completamente gratuita. È sufficiente inserire i dati professionali e verificare l'indirizzo email aziendale per accedere alla documentazione.</p></div>
+        </details>
+        <details class="ta-faq__item">
+          <summary>Quali documenti posso scaricare subito dopo la registrazione?</summary>
+          <div class="ta-faq__answer"><p>Dopo la registrazione e la verifica email, puoi scaricare immediatamente tutte le schede tecniche, le guide di posa, le brochure e le certificazioni standard. Alcuni documenti specialistici possono richiedere un'approvazione da parte dell'ufficio tecnico.</p></div>
+        </details>
+        <details class="ta-faq__item">
+          <summary>Cosa significa "Approvazione richiesta"?</summary>
+          <div class="ta-faq__answer"><p>Alcuni documenti, come certificazioni particolari o materiali riservati a specifici partner, richiedono una verifica da parte dell'ufficio tecnico prima dell'autorizzazione al download. La richiesta viene gestita entro 24 ore lavorative.</p></div>
+        </details>
+        <details class="ta-faq__item">
+          <summary>In che formato sono disponibili i documenti?</summary>
+          <div class="ta-faq__answer"><p>La documentazione è prevalentemente in formato PDF. Alcuni manuali e guide possono includere allegati in formato DWG o DXF per l'integrazione diretta nei software di progettazione.</p></div>
+        </details>
+        <details class="ta-faq__item">
+          <summary>Come posso inviare elaborati tecnici?</summary>
+          <div class="ta-faq__answer"><p>Dalla sezione "Invia elaborati tecnici" puoi caricare disegni, computi, distinte di sagomatura o qualsiasi documentazione di progetto. L'ufficio tecnico analizzerà la richiesta e ti ricontatterà per una valutazione dedicata. Sono ammessi file PDF, DWG, DXF, ZIP, JPG, PNG e XLS.</p></div>
+        </details>
+        <details class="ta-faq__item">
+          <summary>Posso accedere all'area tecnica da dispositivo mobile?</summary>
+          <div class="ta-faq__answer"><p>Sì, l'area tecnica è completamente responsive e accessibile da smartphone, tablet e desktop.</p></div>
+        </details>
+        <details class="ta-faq__item">
+          <summary>Ho dimenticato la password, come posso recuperarla?</summary>
+          <div class="ta-faq__answer"><p>Dalla schermata di login, clicca su "Password dimenticata?" e inserisci l'email utilizzata in fase di registrazione. Riceverai un link per impostare una nuova password in pochi minuti.</p></div>
+        </details>
       </div>
-
-      <p style="margin-top: 1.5rem; font-family: var(--font-body); font-size: var(--fs-sm); color: var(--steel-600); line-height: 1.5;">
-        Tutti i documenti vengono inviati via email dopo la compilazione del modulo. Per richieste urgenti o documentazione specifica non presente in elenco, contatta direttamente l'ufficio tecnico.
-      </p>
     </div>
   </section>
 
-  <!-- ════════════════════════════════════════════════════════════════
-       CTA — Presenta un progetto / Ufficio tecnico
-       ════════════════════════════════════════════════════════════════ -->
-  <section class="cta-section">
+  <!-- ═══════════════════════════════════════════════════════
+       FOOTER CTA — TechnicalSupportCTA
+       ═══════════════════════════════════════════════════════ -->
+  <section class="ta-support-cta">
     <div class="container">
-      <div class="cta-inner">
-        <div>
-          <p class="eyebrow eyebrow--blue mb-md">Supporto al progetto</p>
-          <h2 style="color:var(--pure-white);">Hai un progetto<br>da presentare?</h2>
-          <p>Invia elaborati, distinte di sagomatura o documentazione tecnica. L'ufficio tecnico Ferramati analizzer&agrave; la richiesta e ti ricontatter&agrave; con una proposta operativa.</p>
+      <div class="ta-support-cta__inner">
+        <div class="ta-support-cta__text">
+          <p class="eyebrow" style="color:var(--color-blueprint-blue); margin-bottom:var(--s-sm);">Supporto al progetto</p>
+          <h2>Hai un progetto da sottoporre<br>al nostro ufficio tecnico?</h2>
+          <p>Carica elaborati, disegni, computi o documentazione tecnica. Il team Ferramati analizzerà la richiesta e ti ricontatterà per valutare la soluzione più adatta al tuo cantiere.</p>
         </div>
-        <div class="cta-actions">
-          <a href="../contatti.html" class="btn btn--primary">Invia elaborati tecnici</a>
-          <a href="../contatti.html" class="btn btn--ghost">Parla con l'ufficio tecnico</a>
+        <div class="ta-support-cta__actions">
+          <a href="invia-elaborati.html" class="btn btn--primary">Invia elaborati tecnici</a>
+          <a href="../contatti.html" class="btn btn--outline-white">Parla con l'ufficio tecnico</a>
         </div>
       </div>
     </div>
@@ -345,11 +676,6 @@
         <div class="site-footer__brand">
           <img src="../../assets/img/ferramati-logo.svg" alt="Ferramati" style="filter: brightness(0) invert(1); height:30px;">
           <p>Partner tecnico per l'edilizia civile e industriale. Ferro sagomato, prefabbricati in c.a. e sistemi EPS.</p>
-          <div class="site-footer__social">
-            <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
-            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
-            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 11-2.88 0 1.441 1.441 0 012.88 0z"/></svg></a>
-          </div>
         </div>
         <div>
           <h4>Prodotti</h4>
@@ -377,7 +703,7 @@
           <ul>
             <li><a href="../chi-siamo.html#stabilimenti">Fasano (BR)</a></li>
             <li><a href="../chi-siamo.html#stabilimenti">Verdello (BG)</a></li>
-            <li><a href="../chi-siamo.html#stabilimenti">Timi&scedil;oara, Romania</a></li>
+            <li><a href="../chi-siamo.html#stabilimenti">Timișoara, Romania</a></li>
             <li><a href="../chi-siamo.html#stabilimenti">Oradea, Romania</a></li>
           </ul>
         </div>
@@ -401,5 +727,6 @@
   </footer>
 
   <script src="../../assets/js/mobile-menu.js"></script>
+  <script src="../../assets/js/area-tecnica.js"></script>
 </body>
 </html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invia elaborati tecnici — Area tecnica Ferramati</title>
+  <meta name="description" content="Invia elaborati, disegni, computi o documentazione tecnica all'ufficio tecnico Ferramati. Supporto dedicato per il tuo progetto edile.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/design-system.css">
+  <link rel="stylesheet" href="../../assets/css/area-tecnica.css">
+  <link rel="stylesheet" href="../../assets/css/mobile-menu.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <a href="../index.html" class="site-header__logo">
+        <img src="../../assets/img/ferramati-logo.svg" alt="Ferramati" style="filter: brightness(0) invert(1);">
+      </a>
+      <nav class="site-header__nav" aria-label="Navigazione principale">
+        <a href="../chi-siamo.html">Chi siamo</a>
+        <a href="../prodotti/index.html">Prodotti</a>
+        <a href="../index.html#soluzioni">Soluzioni</a>
+        <a href="../realizzazioni/index.html">Realizzazioni</a>
+        <a href="../news/index.html">News</a>
+        <a href="../contatti.html">Contatti</a>
+      </nav>
+      <div class="site-header__actions">
+        <div class="lang-switcher" aria-label="Selezione lingua">
+          <a href="#" class="active">IT</a>
+          <span class="sep">/</span>
+          <a href="../../index.html">EN</a>
+          <span class="sep">/</span>
+          <a href="../../ro/index.html">RO</a>
+        </div>
+        <a href="index.html" class="btn btn--primary btn--sm">Area tecnica</a>
+        <button class="menu-toggle" aria-label="Apri menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+            <line x1="2" y1="5" x2="18" y2="5"/><line x1="2" y1="10" x2="18" y2="10"/><line x1="2" y1="15" x2="18" y2="15"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu__header">
+      <a href="../index.html" class="site-header__logo">
+        <img src="../../assets/img/ferramati-logo.svg" alt="Ferramati" style="filter: brightness(0) invert(1); height: 34px;">
+      </a>
+      <button class="mobile-menu__close" aria-label="Chiudi menu">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="4" y1="4" x2="16" y2="16"/><line x1="16" y1="4" x2="4" y2="16"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-menu__nav" aria-label="Navigazione mobile">
+      <a href="../chi-siamo.html">Chi siamo</a>
+      <a href="../prodotti/index.html">Prodotti</a>
+      <a href="../realizzazioni/index.html">Realizzazioni</a>
+      <a href="../news/index.html">News</a>
+      <a href="../contatti.html">Contatti</a>
+    </nav>
+    <div class="mobile-menu__footer">
+      <a href="index.html" class="btn btn--primary" style="width:100%; justify-content:center;">Area tecnica</a>
+    </div>
+  </div>
+
+  <!-- BREADCRUMB -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <a href="../index.html">Home</a>
+      <span>/</span>
+      <a href="index.html">Area tecnica</a>
+      <span>/</span>
+      <span aria-current="page">Invia elaborati tecnici</span>
+    </div>
+  </nav>
+
+  <!-- PROJECT UPLOAD -->
+  <section class="ta-upload">
+    <div class="container">
+      <div class="ta-section-head" style="margin-bottom:var(--s-xl);">
+        <p class="eyebrow">Supporto al progetto</p>
+        <h1>Invia elaborati tecnici</h1>
+        <p>Carica elaborati, disegni, computi o documentazione tecnica. Il team Ferramati analizzerà la richiesta e ti ricontatterà per valutare la soluzione più adatta al tuo cantiere.</p>
+      </div>
+
+      <div class="ta-upload__layout">
+
+        <!-- FORM -->
+        <form class="ta-form" id="project-upload-form" novalidate>
+          <div class="ta-form__group">
+            <label class="ta-form__label" for="proj-nome">Nome progetto *</label>
+            <input class="ta-form__input" type="text" id="proj-nome" name="nome_progetto" required placeholder="es. Nuovo complesso residenziale Via Roma">
+          </div>
+
+          <div class="ta-form__row ta-form__row--2">
+            <div class="ta-form__group">
+              <label class="ta-form__label" for="proj-azienda">Azienda *</label>
+              <input class="ta-form__input" type="text" id="proj-azienda" name="azienda" required autocomplete="organization">
+            </div>
+            <div class="ta-form__group">
+              <label class="ta-form__label" for="proj-referente">Nome referente *</label>
+              <input class="ta-form__input" type="text" id="proj-referente" name="referente" required autocomplete="name">
+            </div>
+          </div>
+
+          <div class="ta-form__row ta-form__row--2">
+            <div class="ta-form__group">
+              <label class="ta-form__label" for="proj-email">Email *</label>
+              <input class="ta-form__input" type="email" id="proj-email" name="email" required autocomplete="email">
+            </div>
+            <div class="ta-form__group">
+              <label class="ta-form__label" for="proj-telefono">Telefono *</label>
+              <input class="ta-form__input" type="tel" id="proj-telefono" name="telefono" required autocomplete="tel">
+            </div>
+          </div>
+
+          <div class="ta-form__row ta-form__row--2">
+            <div class="ta-form__group">
+              <label class="ta-form__label" for="proj-localita">Località cantiere *</label>
+              <input class="ta-form__input" type="text" id="proj-localita" name="localita" required placeholder="es. Milano (MI)">
+            </div>
+            <div class="ta-form__group">
+              <label class="ta-form__label" for="proj-tipologia">Tipologia intervento *</label>
+              <select class="ta-form__select" id="proj-tipologia" name="tipologia" required>
+                <option value="">Seleziona</option>
+                <option value="residenziale">Residenziale</option>
+                <option value="industriale">Industriale</option>
+                <option value="commerciale">Commerciale</option>
+                <option value="infrastrutturale">Infrastrutturale</option>
+                <option value="ristrutturazione">Ristrutturazione</option>
+                <option value="altro">Altro</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="ta-form__row ta-form__row--2">
+            <div class="ta-form__group">
+              <label class="ta-form__label" for="proj-prodotto">Prodotto di interesse *</label>
+              <select class="ta-form__select" id="proj-prodotto" name="prodotto" required>
+                <option value="">Seleziona</option>
+                <option value="ferro-sagomato">Ferro sagomato</option>
+                <option value="fercass">FERCASS</option>
+                <option value="lastre-tralicciate">Lastre tralicciate</option>
+                <option value="doppie-lastre">Doppie lastre</option>
+                <option value="eps">Elementi EPS</option>
+                <option value="sistema-step">Sistema STEP</option>
+                <option value="multiprodotto">Più prodotti</option>
+              </select>
+            </div>
+            <div class="ta-form__group">
+              <label class="ta-form__label" for="proj-fase">Fase progetto *</label>
+              <select class="ta-form__select" id="proj-fase" name="fase" required>
+                <option value="">Seleziona</option>
+                <option value="studio-preliminare">Studio preliminare</option>
+                <option value="progetto-definitivo">Progetto definitivo</option>
+                <option value="progetto-esecutivo">Progetto esecutivo</option>
+                <option value="gara-capitolato">Gara / capitolato</option>
+                <option value="cantiere-avviato">Cantiere avviato</option>
+                <option value="altro">Altro</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- File Upload -->
+          <div class="ta-form__group">
+            <label class="ta-form__label">Upload file *</label>
+            <div class="ta-dropzone" role="button" tabindex="0" aria-label="Trascina i file qui o clicca per selezionarli">
+              <div class="ta-dropzone__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="48" height="48">
+                  <path d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+                </svg>
+              </div>
+              <p class="ta-dropzone__text">Trascina i file qui oppure <strong>clicca per selezionarli</strong></p>
+              <p class="ta-dropzone__hint">PDF, DWG, DXF, ZIP, JPG, PNG, XLS — Max 25 MB / file — Max 5 file</p>
+              <input type="file" class="ta-dropzone__input" multiple accept=".pdf,.dwg,.dxf,.zip,.jpg,.jpeg,.png,.xls,.xlsx">
+            </div>
+            <div class="ta-file-list" aria-live="polite"></div>
+          </div>
+
+          <!-- Note -->
+          <div class="ta-form__group">
+            <label class="ta-form__label" for="proj-note">Note tecniche</label>
+            <textarea class="ta-form__textarea" id="proj-note" name="note" placeholder="Indicazioni aggiuntive per l'ufficio tecnico: dimensioni, quantità, specifiche particolari..."></textarea>
+          </div>
+
+          <hr class="ta-form__divider">
+
+          <label class="ta-form__checkbox">
+            <input type="checkbox" name="privacy" required>
+            <span>Dichiaro di aver letto l'<a href="../privacy-policy.html">informativa privacy</a> e acconsento al trattamento dei dati personali per la gestione della richiesta tecnica. *</span>
+          </label>
+          <label class="ta-form__checkbox">
+            <input type="checkbox" name="marketing">
+            <span>Acconsento a ricevere comunicazioni tecnico-commerciali da Ferramati. (facoltativo)</span>
+          </label>
+
+          <button type="submit" class="btn btn--primary" style="width:100%; justify-content:center;">Invia elaborati tecnici</button>
+        </form>
+
+        <!-- SIDEBAR -->
+        <div>
+          <div class="ta-auth__info">
+            <p class="eyebrow" style="color:var(--color-safety-orange); margin-bottom:var(--s-md);">Come funziona</p>
+            <h3>Il tuo progetto, analizzato dal team Ferramati</h3>
+            <p>Invia la documentazione di progetto e riceverai una valutazione tecnica personalizzata. L'ufficio tecnico ti ricontatterà per condividere le prime indicazioni operative.</p>
+            <ul class="ta-auth__info-list">
+              <li>Compila i dati del progetto</li>
+              <li>Carica elaborati, disegni o computi</li>
+              <li>Ricevi conferma via email</li>
+              <li>L'ufficio tecnico analizza la richiesta</li>
+              <li>Ricevi riscontro entro 48 ore lavorative</li>
+            </ul>
+          </div>
+
+          <div class="ta-auth__info" style="margin-top:var(--s-xl); background:var(--steel-50); border:1px solid var(--steel-200);">
+            <p style="font-family:var(--font-mono); font-size:var(--fs-xs); text-transform:uppercase; letter-spacing:var(--ls-label); color:var(--color-blueprint-blue); margin-bottom:var(--s-xs); font-weight:500;">Formati ammessi</p>
+            <p style="color:var(--steel-800); font-size:var(--fs-sm); line-height:1.6; margin-bottom:var(--s-sm);">
+              <strong>PDF</strong> — Elaborati, relazioni, computi<br>
+              <strong>DWG / DXF</strong> — Disegni CAD<br>
+              <strong>ZIP</strong> — Pacchetti multipli (max 100 MB)<br>
+              <strong>JPG / PNG</strong> — Foto cantiere, schizzi<br>
+              <strong>XLS / XLSX</strong> — Distinte, quantità
+            </p>
+            <p style="font-size:10px; color:var(--steel-400); font-family:var(--font-mono); text-transform:uppercase; letter-spacing:0.05em;">Max 25 MB per file — Max 5 file per richiesta</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER CTA -->
+  <section class="ta-support-cta">
+    <div class="container">
+      <div class="ta-support-cta__inner">
+        <div class="ta-support-cta__text">
+          <p class="eyebrow" style="color:var(--color-blueprint-blue); margin-bottom:var(--s-sm);">Area tecnica</p>
+          <h2>Cerchi documentazione tecnica?</h2>
+          <p>Accedi al catalogo documenti dell'area tecnica Ferramati per scaricare schede prodotto, certificazioni, guide di posa e brochure.</p>
+        </div>
+        <div class="ta-support-cta__actions">
+          <a href="index.html#catalogo" class="btn btn--primary">Vai al catalogo documenti</a>
+          <a href="../contatti.html" class="btn btn--outline-white">Parla con l'ufficio tecnico</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <img src="../../assets/img/ferramati-logo.svg" alt="Ferramati" style="filter: brightness(0) invert(1); height:30px;">
+          <p>Partner tecnico per l'edilizia civile e industriale. Ferro sagomato, prefabbricati in c.a. e sistemi EPS.</p>
+        </div>
+        <div>
+          <h4>Prodotti</h4>
+          <ul>
+            <li><a href="../prodotti/ferro-sagomato.html">Ferro sagomato</a></li>
+            <li><a href="../prodotti/fercass.html">FERCASS</a></li>
+            <li><a href="../prodotti/lastre-tralicciate.html">Lastre tralicciate</a></li>
+            <li><a href="../prodotti/doppie-lastre.html">Doppie lastre</a></li>
+            <li><a href="../prodotti/eps.html">Elementi EPS</a></li>
+            <li><a href="../prodotti/sistema-step.html">Sistema STEP</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Azienda</h4>
+          <ul>
+            <li><a href="../chi-siamo.html">Chi siamo</a></li>
+            <li><a href="../chi-siamo.html#stabilimenti">Stabilimenti</a></li>
+            <li><a href="../chi-siamo.html#certificazioni">Certificazioni</a></li>
+            <li><a href="../lavora-con-noi.html">Lavora con noi</a></li>
+            <li><a href="../news/index.html">News</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Sedi</h4>
+          <ul>
+            <li><a href="../chi-siamo.html#stabilimenti">Fasano (BR)</a></li>
+            <li><a href="../chi-siamo.html#stabilimenti">Verdello (BG)</a></li>
+            <li><a href="../chi-siamo.html#stabilimenti">Timișoara, Romania</a></li>
+            <li><a href="../chi-siamo.html#stabilimenti">Oradea, Romania</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>&copy; 2026 Ferramati International S.r.l. Tutti i diritti riservati.</span>
+        <div class="site-footer__legal">
+          <a href="../privacy-policy.html">Privacy Policy</a>
+          <a href="../cookie-policy.html">Cookie Policy</a>
+          <a href="../condizioni-vendita.html">Condizioni di vendita</a>
+        </div>
+        <div class="lang-switcher">
+          <a href="#" class="active">IT</a>
+          <span class="sep">/</span>
+          <a href="../../index.html">EN</a>
+          <span class="sep">/</span>
+          <a href="../../ro/index.html">RO</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/mobile-menu.js"></script>
+  <script src="../../assets/js/area-tecnica.js"></script>
+</body>
+</html>
